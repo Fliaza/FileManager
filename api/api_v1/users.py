@@ -19,10 +19,3 @@ async def create_user(
                       ):
      user = await create_users(session=session, user_crete=user_create)
      return user
-
-@router.get("/get_current_user")
-async def get_curr_user(
-        user_read: UserRead,
-        session: AsyncSession = Depends(db_helper.session_getter)
-):
-     user =
